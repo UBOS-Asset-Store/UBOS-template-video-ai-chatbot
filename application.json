@@ -1,0 +1,48 @@
+{
+    "_id": "6581a927bcfc4a944441de15",
+    "name": "videoaiui",
+    "slug": "videoaiui",
+    "organizationId": "Org",
+    "isPublic": false,
+    "isMenu": false,
+    "isShowPlatformTag": true,
+    "createdAt": "2023-12-19T14:31:03.218Z",
+    "updatedAt": "2023-12-19T14:31:03.218Z",
+    "deleted": false,
+    "pages": [
+        {
+            "_id": "home",
+            "isDefault": true
+        }
+    ],
+    "policies": [
+        {
+            "permission": "makePublic:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "read:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "publish:applications",
+            "groups": [],
+            "users": []
+        },
+        {
+            "permission": "manage:applications",
+            "groups": [],
+            "users": []
+        }
+    ],
+    "gitApplicationMetadata": {
+        "browserSupportedRemoteUrl": "https://github.com/UBOS-Asset-Store/UBOS-template-video-ai-chatbot-ui",
+        "defaultApplicationId": "videoaiui",
+        "defaultBranchName": "main",
+        "isRepoPrivate": true,
+        "remoteUrl": "git@github.com:UBOS-Asset-Store/UBOS-template-video-ai-chatbot-ui.git",
+        "repoName": "UBOS-template-video-ai-chatbot-ui"
+    }
+}
