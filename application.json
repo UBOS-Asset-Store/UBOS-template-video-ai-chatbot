@@ -44,5 +44,8 @@
         "isRepoPrivate": true,
         "remoteUrl": "git@github.com:UBOS-Asset-Store/UBOS-template-video-ai-chatbot-ui.git",
         "repoName": "UBOS-template-video-ai-chatbot-ui"
+    },
+    "global_setting": {
+        "css": "${env.get(\"NODEREDURL\")}/css"
     }
 }
