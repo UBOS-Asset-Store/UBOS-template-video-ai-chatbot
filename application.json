@@ -7,7 +7,7 @@
     "isMenu": false,
     "isShowPlatformTag": true,
     "createdAt": "2023-12-19T14:31:03.218Z",
-    "updatedAt": "2023-12-19T14:31:03.218Z",
+    "updatedAt": "2023-12-20T18:33:06.488Z",
     "deleted": false,
     "pages": [
         {
@@ -47,5 +47,8 @@
     },
     "global_setting": {
         "css": "${env.get(\"NODEREDURL\")}/css"
+    },
+    "appLayout": {
+        "type": "FLUID"
     }
 }
