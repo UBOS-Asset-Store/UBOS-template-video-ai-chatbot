@@ -114,7 +114,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"botName\": {{JSON.stringify(bot_name_input.text)}},\n\t\"botToken\": {{JSON.stringify(bot_token_input.text)}},\n\t\"openAIKey\": {{JSON.stringify(openai_key_input1.text)}},\n\t\"elevenlabsKey\": {{JSON.stringify(elevenlabs_key_input1.text)}},\n\t\"elevenlabsVoice\": {{JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)}},\n\t\"d_idKey\": {{JSON.stringify(d_id_key_input.text)}},\n\t\"d_idAvatar\": {{JSON.stringify(main.store.userAvatar)}},\n\t\"d_idActor\": {{JSON.stringify(actors_list.selectedItem.presenter_id)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"greetings\": {{JSON.stringify(greetings_input.text)}}\n}"
+                "body": "{\n\t\"botName\": {{JSON.stringify(bot_name_input.text)}},\n\t\"botToken\": {{JSON.stringify(bot_token_input.text)}},\n\t\"openAIKey\": {{JSON.stringify(openai_key_input1.text)}},\n\t\"elevenlabsKey\": {{JSON.stringify(elevenlabs_key_input1.text)}},\n\t\"elevenlabsVoice\": {{JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)}},\n\t\"d_idKey\": {{JSON.stringify(d_id_key_input.text)}},\n\t\"d_idAvatar\": {{JSON.stringify(actors_list.selectedItem.presenter_id)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"greetings\": {{JSON.stringify(greetings_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -134,7 +134,6 @@
                 "JSON.stringify(elevenlabs_key_input1.text)",
                 "JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)",
                 "JSON.stringify(d_id_key_input.text)",
-                "JSON.stringify(main.store.userAvatar)",
                 "JSON.stringify(actors_list.selectedItem.presenter_id)",
                 "JSON.stringify(prompt_input.text)",
                 "JSON.stringify(greetings_input.text)"
@@ -143,7 +142,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-21T12:49:04.621Z",
-        "updatedAt": "2023-12-22T16:35:57.889Z",
+        "updatedAt": "2023-12-26T16:40:28.417Z",
         "deleted": false,
         "policies": [
             {
@@ -181,7 +180,7 @@
                 "pluginId": "API",
                 "messages": []
             },
-            "executeOnLoad": false,
+            "executeOnLoad": true,
             "pageId": "home",
             "actionConfiguration": {
                 "timeoutInMillisecond": 10000,
@@ -218,7 +217,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-21T13:42:59.434Z",
-        "updatedAt": "2023-12-22T17:34:34.964Z",
+        "updatedAt": "2023-12-25T09:19:50.229Z",
         "deleted": false,
         "policies": [
             {
@@ -384,7 +383,7 @@
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-22T16:23:33.024Z",
-        "updatedAt": "2023-12-22T16:36:32.403Z",
+        "updatedAt": "2023-12-25T11:44:59.612Z",
         "deleted": false,
         "policies": [
             {
@@ -403,5 +402,161 @@
                 "users": []
             }
         ]
+    },
+    {
+        "_id": "658944a220e9e03464a11cfb",
+        "applicationId": "videoaiui",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "selectAvatar",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.NODEREDURL}}/selectAvatar"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "PUT",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ],
+                "body": "{\n\t\"_id\":{{JSON.stringify(actors_list.selectedItem._id)}}\n}"
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.NODEREDURL",
+                "JSON.stringify(actors_list.selectedItem._id)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2023-12-25T09:00:18.423Z",
+        "updatedAt": "2023-12-25T09:01:12.598Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
+    },
+    {
+        "name": "myFun1",
+        "pageId": "home",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "() => {\n\t\n\t\treturn actors_list.currentItem.selected === true ? \"blue\" : \"transparent\"\n\t\t}",
+            "isAsync": false,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "6589517320e9e03464a11cfd",
+        "id": "6589517320e9e03464a11cfd",
+        "collectionId": "6589517320e9e03464a11cfc",
+        "confirmBeforeExecute": false,
+        "applicationId": "videoaiui",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "getColor.myFun1",
+        "isValid": true,
+        "jsonPathKeys": [
+            "() => {\n\t\t//write code here\n\t}"
+        ],
+        "pluginType": "JS"
+    },
+    {
+        "name": "myFun2",
+        "pageId": "home",
+        "executeOnLoad": false,
+        "actionConfiguration": {
+            "body": "async () => {\n\t\t//use async-await or promises\n\t}",
+            "isAsync": true,
+            "timeoutInMillisecond": 10000,
+            "jsArguments": [],
+            "paginationType": "NONE",
+            "encodeParamsToggle": true
+        },
+        "clientSideExecution": true,
+        "_id": "6589517320e9e03464a11cfe",
+        "id": "6589517320e9e03464a11cfe",
+        "collectionId": "6589517320e9e03464a11cfc",
+        "confirmBeforeExecute": false,
+        "applicationId": "videoaiui",
+        "datasource": {
+            "isValid": true,
+            "messages": [],
+            "name": "UNUSED_DATASOURCE",
+            "new": true,
+            "pluginId": "",
+            "userPermissions": []
+        },
+        "dynamicBindingPathList": [
+            {
+                "key": "body"
+            }
+        ],
+        "fullyQualifiedName": "getColor.myFun2",
+        "isValid": true,
+        "jsonPathKeys": [
+            "async () => {\n\t\t//use async-await or promises\n\t}"
+        ],
+        "pluginType": "JS"
     }
 ]
