@@ -3,7 +3,7 @@
     "name": "videoaiui",
     "slug": "videoaiui",
     "organizationId": "Org",
-    "isPublic": false,
+    "isPublic": true,
     "isMenu": false,
     "isShowPlatformTag": true,
     "createdAt": "2023-12-19T14:31:03.218Z",

@@ -114,7 +114,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"botName\": {{JSON.stringify(bot_name_input.text)}},\n\t\"botToken\": {{JSON.stringify(bot_token_input.text)}},\n\t\"openAIKey\": {{JSON.stringify(openai_key_input1.text)}},\n\t\"elevenlabsKey\": {{JSON.stringify(elevenlabs_key_input1.text)}},\n\t\"elevenlabsVoice\": {{JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)}},\n\t\"d_idKey\": {{JSON.stringify(d_id_key_input.text)}},\n\t\"d_idAvatar\": {{JSON.stringify(actors_list.selectedItem.presenter_id)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"greetings\": {{JSON.stringify(greetings_input.text)}}\n}"
+                "body": "{\n\t\"botName\": {{JSON.stringify(bot_name_input.text)}},\n\t\"botToken\": {{JSON.stringify(bot_token_input.text)}},\n\t\"openAIKey\": {{JSON.stringify(openai_key_input1.text)}},\n\t\"chatVersion\": {{JSON.stringify(chat_version_select.selectedOptionValue)}},\n\t\"elevenlabsKey\": {{JSON.stringify(elevenlabs_key_input1.text)}},\n\t\"elevenlabsVoice\": {{JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)}},\n\t\"d_idKey\": {{JSON.stringify(d_id_key_input.text)}},\n\t\"d_idAvatar\": {{JSON.stringify(actors_list.selectedItem.presenter_id)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"greetings\": {{JSON.stringify(greetings_input.text)}},\n\t\"error\": {{JSON.stringify(error_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -131,18 +131,20 @@
                 "JSON.stringify(bot_name_input.text)",
                 "JSON.stringify(bot_token_input.text)",
                 "JSON.stringify(openai_key_input1.text)",
+                "JSON.stringify(chat_version_select.selectedOptionValue)",
                 "JSON.stringify(elevenlabs_key_input1.text)",
                 "JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)",
                 "JSON.stringify(d_id_key_input.text)",
                 "JSON.stringify(actors_list.selectedItem.presenter_id)",
                 "JSON.stringify(prompt_input.text)",
-                "JSON.stringify(greetings_input.text)"
+                "JSON.stringify(greetings_input.text)",
+                "JSON.stringify(error_input.text)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-21T12:49:04.621Z",
-        "updatedAt": "2023-12-26T16:40:28.417Z",
+        "updatedAt": "2023-12-29T18:18:37.307Z",
         "deleted": false,
         "policies": [
             {
@@ -558,5 +560,85 @@
             "async () => {\n\t\t//use async-await or promises\n\t}"
         ],
         "pluginType": "JS"
+    },
+    {
+        "_id": "658eb30320e9e03464a11cff",
+        "applicationId": "videoaiui",
+        "organizationId": "Org",
+        "pluginType": "API",
+        "pluginId": "API",
+        "Action": {
+            "name": "uploadAvatar",
+            "datasource": {
+                "name": "DEFAULT_REST_DATASOURCE",
+                "datasourceConfiguration": {
+                    "url": "{{main.env.NODEREDURL}}/uploadAvatar"
+                },
+                "invalids": [],
+                "isValid": true,
+                "pluginId": "API",
+                "messages": []
+            },
+            "executeOnLoad": false,
+            "pageId": "home",
+            "actionConfiguration": {
+                "timeoutInMillisecond": 10000,
+                "encodeParamsToggle": true,
+                "httpMethod": "POST",
+                "headers": [
+                    {
+                        "key": "content-type",
+                        "value": "application/json"
+                    }
+                ],
+                "queryParameters": [],
+                "body": "{\n\t\"userUrl\": {{JSON.stringify(user_avatar_input.text)}}\n}",
+                "bodyFormData": [],
+                "formData": {
+                    "apiContentType": "none"
+                },
+                "pluginSpecifiedTemplates": [
+                    {
+                        "value": true
+                    }
+                ]
+            },
+            "dynamicBindingPathList": [
+                {
+                    "key": "datasourceUrl"
+                },
+                {
+                    "key": "body"
+                }
+            ],
+            "isValid": true,
+            "invalids": [],
+            "jsonPathKeys": [
+                "main.env.NODEREDURL",
+                "JSON.stringify(user_avatar_input.text)"
+            ],
+            "userSetOnLoad": false,
+            "confirmBeforeExecute": false
+        },
+        "createdAt": "2023-12-29T11:52:35.429Z",
+        "updatedAt": "2023-12-29T12:03:34.324Z",
+        "deleted": false,
+        "policies": [
+            {
+                "permission": "read:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "manage:actions",
+                "groups": [],
+                "users": []
+            },
+            {
+                "permission": "execute:actions",
+                "groups": [],
+                "users": []
+            }
+        ]
     }
 ]
