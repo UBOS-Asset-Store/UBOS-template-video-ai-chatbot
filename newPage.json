@@ -846,10 +846,13 @@
                                                                                                 ],
                                                                                                 "borderRadius": "ROUNDED",
                                                                                                 "boxShadow": "VARIANT3",
-                                                                                                "onClick": "{{getActors.run(() => storeValue('tab', 'D_ID', false), () => storeValue('tab', 'D_ID', false))}}",
+                                                                                                "onClick": "{{getActors.run(() => (storeValue('tab', 'D_ID', false), getAllAvatars.run()), () => storeValue('tab', 'D_ID', false))}}",
                                                                                                 "dynamicPropertyPathList": [
                                                                                                     {
                                                                                                         "key": "isDisabled"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "key": "onClick"
                                                                                                     }
                                                                                                 ]
                                                                                             }
@@ -2902,7 +2905,7 @@
                                                     }
                                                 ],
                                                 "classStyle": "user_info_tabs",
-                                                "onTabSelected": "{{user_info_tabs.selectedTab === 'D_ID' ? getAllAvatars.run() : ''}}",
+                                                "onTabSelected": "",
                                                 "dynamicPropertyPathList": [
                                                     {
                                                         "key": "onTabSelected"

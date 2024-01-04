@@ -46,7 +46,8 @@
         "repoName": "UBOS-template-video-ai-chatbot-ui"
     },
     "global_setting": {
-        "css": "${env.get(\"NODEREDURL\")}/css"
+        "css": "${env.get(\"NODEREDURL\")}/css",
+        "title": "VIDEO AI CHAT-BOT"
     },
     "appLayout": {
         "type": "FLUID"
