@@ -455,7 +455,7 @@
                                                         "isVisible": true
                                                     }
                                                 },
-                                                "shouldShowTabs": false,
+                                                "shouldShowTabs": true,
                                                 "defaultTab": "{{main.store.tab ? main.store.tab : \"Bot\"}}",
                                                 "version": 3,
                                                 "type": "TABS_WIDGET",
@@ -552,7 +552,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "eS3nXXXzaGtvQG41dGxvb3suY29t:_XXXXXXu62menc2Soljl5"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -593,7 +594,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "9cfdXXXXXXda515cacb441ce268c9d6l"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -634,7 +636,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "sk-XXXXXXvY62Az1EeBMtrlT3BlbkFJQ7I1qyDEdhTgjqXXXXXX"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -706,7 +709,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "Your_bot_name"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -747,7 +751,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "6XXXXX8005:AAG67WqIzKhHyil1dYfV1x0mjYBF_XXXXXX"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -1124,7 +1129,8 @@
                                                                                                 ],
                                                                                                 "dynamicTriggerPathList": [],
                                                                                                 "validation": "{{user_avatar_input.text.startsWith(\"https://\")}}",
-                                                                                                "tooltip": "Photo requirements for optimized results:\n\nMedium shot, frontal facing. \n\nNeutral facial expression, closed mouth. \n\nGood and solid lighting.\n\n"
+                                                                                                "tooltip": "Photo requirements for optimized results:\n\nMedium shot, frontal facing. \n\nNeutral facial expression, closed mouth. \n\nGood and solid lighting.\n\n",
+                                                                                                "placeholderText": "https://your_image_url.png"
                                                                                             }
                                                                                         ],
                                                                                         "minHeight": 400,
@@ -2055,7 +2061,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "Enter text to customize the bot's behavior"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -2096,7 +2103,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "Enter your greetings message "
                                                                             },
                                                                             {
                                                                                 "isVisible": true,
@@ -2137,7 +2145,8 @@
                                                                                         "key": "defaultText"
                                                                                     }
                                                                                 ],
-                                                                                "dynamicTriggerPathList": []
+                                                                                "dynamicTriggerPathList": [],
+                                                                                "placeholderText": "Enter your error message"
                                                                             },
                                                                             {
                                                                                 "isVisible": true,

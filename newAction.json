@@ -114,7 +114,7 @@
                         "value": true
                     }
                 ],
-                "body": "{\n\t\"botName\": {{JSON.stringify(bot_name_input.text)}},\n\t\"botToken\": {{JSON.stringify(bot_token_input.text)}},\n\t\"openAIKey\": {{JSON.stringify(openai_key_input1.text)}},\n\t\"chatVersion\": {{JSON.stringify(chat_version_select.selectedOptionValue)}},\n\t\"elevenlabsKey\": {{JSON.stringify(elevenlabs_key_input1.text)}},\n\t\"elevenlabsVoice\": {{JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)}},\n\t\"d_idKey\": {{JSON.stringify(d_id_key_input.text)}},\n\t\"d_idAvatar\": {{JSON.stringify(actors_list.selectedItem.presenter_id)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"greetings\": {{JSON.stringify(greetings_input.text)}},\n\t\"error\": {{JSON.stringify(error_input.text)}}\n}"
+                "body": "{\n\t\"botName\": {{JSON.stringify(bot_name_input.text)}},\n\t\"botToken\": {{JSON.stringify(bot_token_input.text)}},\n\t\"openAIKey\": {{JSON.stringify(openai_key_input.text)}},\n\t\"chatVersion\": {{JSON.stringify(chat_version_select.selectedOptionValue)}},\n\t\"elevenlabsKey\": {{JSON.stringify(elevenlabs_key_input.text)}},\n\t\"elevenlabsVoice\": {{JSON.stringify(elevenlabs_voice_select.selectedOptionValue)}},\n\t\"d_idKey\": {{JSON.stringify(d_id_key_input.text)}},\n\t\"d_idAvatar\": {{JSON.stringify(actors_list.selectedItem.presenter_id)}},\n\t\"prompt\": {{JSON.stringify(prompt_input.text)}},\n\t\"greetings\": {{JSON.stringify(greetings_input.text)}},\n\t\"error\": {{JSON.stringify(error_input.text)}}\n}"
             },
             "dynamicBindingPathList": [
                 {
@@ -130,21 +130,22 @@
                 "main.env.NODEREDURL",
                 "JSON.stringify(bot_name_input.text)",
                 "JSON.stringify(bot_token_input.text)",
-                "JSON.stringify(openai_key_input1.text)",
+                "JSON.stringify(openai_key_input.text)",
                 "JSON.stringify(chat_version_select.selectedOptionValue)",
-                "JSON.stringify(elevenlabs_key_input1.text)",
+                "JSON.stringify(elevenlabs_key_input.text)",
                 "JSON.stringify(elevenlabs_voice_select1.selectedOptionValue)",
                 "JSON.stringify(d_id_key_input.text)",
                 "JSON.stringify(actors_list.selectedItem.presenter_id)",
                 "JSON.stringify(prompt_input.text)",
                 "JSON.stringify(greetings_input.text)",
-                "JSON.stringify(error_input.text)"
+                "JSON.stringify(error_input.text)",
+                "JSON.stringify(elevenlabs_voice_select.selectedOptionValue)"
             ],
             "userSetOnLoad": false,
             "confirmBeforeExecute": false
         },
         "createdAt": "2023-12-21T12:49:04.621Z",
-        "updatedAt": "2024-01-03T18:43:21.785Z",
+        "updatedAt": "2024-01-04T14:37:25.330Z",
         "deleted": false,
         "policies": [
             {

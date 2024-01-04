@@ -47,7 +47,8 @@
     },
     "global_setting": {
         "css": "${env.get(\"NODEREDURL\")}/css",
-        "title": "VIDEO AI CHAT-BOT"
+        "title": "VIDEO AI CHAT-BOT",
+        "favicon": "https://ubos.tech/wp-content/uploads/2024/01/20240104-142015-removebg-preview.png"
     },
     "appLayout": {
         "type": "FLUID"
