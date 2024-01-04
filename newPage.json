@@ -455,7 +455,7 @@
                                                         "isVisible": true
                                                     }
                                                 },
-                                                "shouldShowTabs": true,
+                                                "shouldShowTabs": false,
                                                 "defaultTab": "{{main.store.tab ? main.store.tab : \"Bot\"}}",
                                                 "version": 3,
                                                 "type": "TABS_WIDGET",
