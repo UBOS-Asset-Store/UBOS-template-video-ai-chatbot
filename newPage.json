@@ -3035,17 +3035,6 @@
                                     "main.env.NODEREDURL"
                                 ],
                                 "timeoutInMillisecond": 10000
-                            },
-                            {
-                                "_id": "658440e320e9e03464a11cf6",
-                                "id": "658440e320e9e03464a11cf6",
-                                "confirmBeforeExecute": false,
-                                "name": "getAllAvatars",
-                                "pluginType": "API",
-                                "jsonPathKeys": [
-                                    "main.env.NODEREDURL"
-                                ],
-                                "timeoutInMillisecond": 10000
                             }
                         ]
                     ],
